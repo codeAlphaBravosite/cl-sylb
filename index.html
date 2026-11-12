@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CLAT 2027 Final Syllabus Tracker (92-Mark Core)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-alt: #F1F5F9;
+      --border: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --text-main: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --primary: #1D4ED8;
+      --primary-bg: #EFF6FF;
+      --primary-border: #BFDBFE;
+      --emerald: #059669;
+      --emerald-bg: #ECFDF5;
+      --emerald-border: #A7F3D0;
+      --amber: #D97706;
+      --amber-bg: #FFFBEB;
+      --amber-border: #FDE68A;
+      --rose: #E11D48;
+      --rose-bg: #FFF1F2;
+      --rose-border: #FECDD3;
+      --purple: #7C3AED;
+      --purple-bg: #F5F3FF;
+      --purple-border: #DDD6FE;
+      --radius-lg: 14px;
+      --radius-md: 10px;
+      --radius-sm: 6px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.55;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    /* Header Banner */
+    .hero-header {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-left {
+      max-width: 680px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: rgba(59, 130, 246, 0.2);
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      color: #93C5FD;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      color: #CBD5E1;
+    }
+
+    .hero-stats {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 16px 22px;
+      min-width: 260px;
+      text-align: right;
+    }
+
+    .hero-score-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94A3B8;
+      margin-bottom: 4px;
+    }
+
+    .hero-score-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 700;
+      color: #34D399;
+    }
+
+    .hero-progress-bar {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      margin-top: 8px;
+      overflow: hidden;
+    }
+
+    .hero-progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3B82F6, #10B981);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    /* Section Summary Cards */
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .sec-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sec-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .sec-card.active {
+      border: 2px solid var(--primary);
+      background: var(--primary-bg);
+    }
+
+    .sec-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .sec-num-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--surface-alt);
+      color: var(--text-secondary);
+    }
+
+    .sec-weight {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .sec-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .sec-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .sec-prog-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-prog-bar {
+      flex: 1;
+      height: 6px;
+      background: var(--surface-alt);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .sec-prog-fill {
+      height: 100%;
+      background: var(--emerald);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .sec-prog-text {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 12px;
+      z-index: 50;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 600;
+      padding: 7px 11px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-btn:hover {
+      background: var(--surface-alt);
+    }
+
+    .filter-btn.active {
+      background: var(--text-main);
+      color: #FFFFFF;
+      border-color: var(--text-main);
+    }
+
+    .search-input {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-strong);
+      min-width: 210px;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.15);
+    }
+
+    .action-btns {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .util-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text-secondary);
+      cursor: pointer;
+    }
+
+    .util-btn:hover {
+      background: var(--border);
+    }
+
+    /* Section Block Header */
+    .section-block {
+      margin-bottom: 36px;
+    }
+
+    .section-banner {
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      border-left: 6px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-banner-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .section-banner-sub {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    .section-banner-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .meta-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    /* Numbered Topic Card */
+    .topic-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .topic-card.completed-card {
+      border-color: var(--emerald-border);
+      background: #F9FDFB;
+    }
+
+    .topic-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .topic-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .topic-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 700;
+      background: var(--text-main);
+      color: #FFFFFF;
+      padding: 3px 9px;
+      border-radius: 6px;
+    }
+
+    .topic-card.completed-card .topic-number {
+      background: var(--emerald);
+    }
+
+    .topic-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .prio-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .prio-1 {
+      background: var(--rose-bg);
+      color: var(--rose);
+      border: 1px solid var(--rose-border);
+    }
+
+    .prio-2 {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid var(--amber-border);
+    }
+
+    .prio-3 {
+      background: var(--purple-bg);
+      color: var(--purple);
+      border: 1px solid var(--purple-border);
+    }
+
+    .freq-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--primary-bg);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+    }
+
+    .subtopics-box {
+      background: var(--surface-alt);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      border-left: 3px solid var(--border-strong);
+    }
+
+    .subtopics-box strong {
+      color: var(--text-main);
+    }
+
+    /* 3-Step Checkbox Row */
+    .check-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .check-label {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+
+    .check-label:hover {
+      border-color: var(--primary);
+      background: var(--primary-bg);
+    }
+
+    .check-label input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--emerald);
+      cursor: pointer;
+    }
+
+    .check-label.checked {
+      background: var(--emerald-bg);
+      border-color: var(--emerald-border);
+      color: #065F46;
+      font-weight: 600;
+    }
+
+    /* Details / Stems Drawer */
+    .details-toggle {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--primary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 0;
+    }
+
+    .details-toggle:hover {
+      text-decoration: underline;
+    }
+
+    .details-content {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-strong);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .details-content.collapsed {
+      display: none;
+    }
+
+    .detail-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+    }
+
+    .detail-box-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 5px;
+    }
+
+    .stem-quote {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #1E293B;
+      background: #EFF6FF;
+      border-left: 3px solid var(--primary);
+      padding: 6px 9px;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+
+    .trap-alert {
+      background: #FFFBEB;
+      border-left: 3px solid var(--amber);
+      padding: 6px 9px;
+      border-radius: 4px;
+      color: #92400E;
+      font-size: 12.5px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-header {
+        padding: 20px;
+      }
+      .hero-stats {
+        width: 100%;
+        text-align: left;
+      }
+      .controls-bar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Header -->
+    <header class="hero-header">
+      <div class="hero-left">
+        <div class="hero-eyebrow">CLAT 2027 • 92-Mark Skill Core (GK/CA Excluded) • Final Locked Edition</div>
+        <h1 class="hero-title">Master Numbered Syllabus & Priority Tracker</h1>
+        <p class="hero-subtitle">
+          100% Verified against all 504 Non-GK Questions from Official CLAT 2022–2026 Papers + 2027 New-Topic Shock Insurance. Organized strictly in Priority Order (`1.1` to `4.7` • 38 Topics).
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-score-label">Overall Core Readiness</div>
+        <div class="hero-score-val" id="globalProgressText">0 / 114 Steps (0%)</div>
+        <div class="hero-progress-bar">
+          <div class="hero-progress-fill" id="globalProgressBar"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 4 Section Summary Cards -->
+    <div class="section-grid" id="sectionCardsContainer"></div>
+
+    <!-- Filter & Search Bar -->
+    <div class="controls-bar">
+      <div class="filter-group" id="prioFilterGroup">
+        <button class="filter-btn active" data-prio="ALL">All 38 Topics</button>
+        <button class="filter-btn" data-prio="P1">🔥 Priority 1: Core Lock</button>
+        <button class="filter-btn" data-prio="P2">⚡ Priority 2: High-Yield</button>
+        <button class="filter-btn" data-prio="P3">🛡️ Priority 3: 2027 Shock Insurance</button>
+        <button class="filter-btn" data-prio="TODO">⏳ Remaining Only</button>
+      </div>
+      <div class="filter-group">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search topic #, rule, or stem..." />
+        <div class="action-btns">
+          <button class="util-btn" id="toggleAllDetailsBtn">Hide/Show Stems</button>
+          <button class="util-btn" id="resetProgressBtn">Reset Checks</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Syllabus Container -->
+    <main id="syllabusMain"></main>
+  </div>
+
+  <script>
+    const SYLLABUS_DATA = [
+      {
+        secId: "SEC1",
+        secNum: "SECTION 1",
+        title: "Legal Reasoning",
+        questions: "30–32 Questions (6 Passages)",
+        timeBudget: "35 Mins (~5.5 mins/passage)",
+        targetScore: "28.5+ / 32 Marks",
+        topics: [
+          {
+            id: "1.1",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Indian Contract Act, 1872 (Formation, Validity, Breach & Special Contracts)",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 1–2 Passages (5–10 Qs)",
+            subtopics: "Offer vs Invitation to Offer, Acceptance & Revocation, Consideration (Sec 25 exceptions), Capacity (Minor's agreement - Mohori Bibee), Free Consent (Coercion, Undue Influence, Fraud, Misrepresentation, Mistake), Wagering & Contingent Contracts, Frustration (Sec 56), Remoteness of Damages (Sec 73), Penalty (Sec 74), Indemnity, Guarantee, Bailment & Agency.",
+            qTypes: "Hypothetical Fact-Principle Application (65%) + Multi-Statement (I, II, III) Conditional Validity (20%) + Exception/Proviso Identification (15%).",
+            stems: [
+              "\"Decide whether the contract between [A] and [B] is valid and enforceable under the passage:\"",
+              "\"Suppose the facts are modified such that [new condition]; how would the outcome change?\"",
+              "\"Which of the following, if true, would vitiate free consent according to the author?\""
+            ],
+            trap: "Zero outside knowledge allowed! If the passage modifies a standard Contract Act rule or adds a specific 3-part test, apply ONLY the passage's test."
+          },
+          {
+            id: "1.2",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Constitutional Fundamental Rights (Articles 14, 15, 16, 19, 20, 21 & 25)",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 1–2 Passages (5–10 Qs)",
+            subtopics: "Equality & Manifest Arbitrariness (Art 14), Affirmative Action (Art 15/16), Free Speech & Reasonable Restrictions (Art 19(1)(a) & 19(2)), Double Jeopardy & Self-Incrimination (Art 20), Right to Life, Privacy, Autonomy & Passive Euthanasia (Art 21 - March 2026 SC Modification), LGBTQIA+ Rights (CLAT 2026 Q82), Essential Religious Practices (Art 25).",
+            qTypes: "Proportionality Test Application + Reasonable Restriction Trigger + Competing Fundamental Rights Balancing.",
+            stems: [
+              "\"Is the restriction imposed by the State valid under Article 19(2) as explained in the passage?\"",
+              "\"Which of the following statements is INCORRECT according to the constitutional principles discussed above?\"",
+              "\"Apply the four-pronged proportionality test from the passage to the following state action:\""
+            ],
+            trap: "Watch out for 'legitimate state aim' vs 'least restrictive measure'—an action can have a valid aim and still fail proportionality."
+          },
+          {
+            id: "1.3",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Criminal Law & Bharatiya Nyaya Sanhita (BNS), 2023 (Mens Rea, Exceptions & Homicide)",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 1 Passage (5 Qs)",
+            subtopics: "Actus Reus + Mens Rea (Intention, Knowledge, Negligence, Recklessness), Corporate Criminal Liability & Alter Ego Doctrine (SC 2025/2026), General Exceptions (Insanity, Intoxication, Mistake of Fact, Private Defence, Necessity), Culpable Homicide vs Murder (BNS Sec 100–103), Abetment & Joint Liability (Common Intention vs Common Object).",
+            qTypes: "State-of-Mind (Mens Rea) Classification + Statutory Proviso/Exception Check + Multi-Accused Liability.",
+            stems: [
+              "\"Can the director be held vicariously liable for the offence committed by the company under the passage?\"",
+              "\"Does [X]'s act fall within the exception of grave and sudden provocation as defined in the passage?\"",
+              "\"Which mental element (mens rea) is established by the facts above?\""
+            ],
+            trap: "Vicarious criminal liability of company directors is NEVER automatic unless the statute explicitly provides for it OR active mens rea/alter ego is proved in the facts."
+          },
+          {
+            id: "1.4",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core (#1 Rebound Lock)",
+            name: "Law of Torts (Negligence, Strict vs Absolute Liability, Nuisance & Defamation)",
+            freq: "Asked 4/5 Years (2022–2025 — skipped in 2026 = #1 Rebound Lock for 2027!) • Expected: 1 Passage (5 Qs)",
+            subtopics: "Negligence (Duty of Care, Breach, Proximate Cause, Res Ipsa Loquitur, Contributory vs Composite Negligence, Nervous Shock), Strict Liability (Rylands v. Fletcher + 5 Exceptions: Act of God, Plaintiff's Default, Third Party, Statutory Authority, Consent) vs Absolute Liability (M.C. Mehta - Zero Exceptions), Vicarious Liability (Course of Employment), Defamation & Nuisance.",
+            qTypes: "Strict vs Absolute Liability Trap + Vicarious 'Frolic vs Detour' Application + Tort Defences (Volenti Non Fit Injuria).",
+            stems: [
+              "\"If the enterprise is engaged in a hazardous or inherently dangerous activity, can it plead Act of God?\"",
+              "\"Was the employee acting in the course of employment when the injury occurred?\"",
+              "\"Which defense is available to the defendant under the rule stated in the passage?\""
+            ],
+            trap: "If the passage triggers 'Absolute Liability' (hazardous enterprise), ALL 5 exceptions of Strict Liability (including Act of God and third-party sabotage) are 100% barred."
+          },
+          {
+            id: "1.5",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Family Law & Personal Laws (Marriage, Divorce, Maintenance & Succession)",
+            freq: "Asked 4/5 Years (2022–2025) • Expected: 0.5–1 Passage (5 Qs)",
+            subtopics: "Hindu Marriage Act & Special Marriage Act (Void vs Voidable Marriages, Sapinda/Prohibited Degrees), Cruelty, Desertion & Irretrievable Breakdown of Marriage (Art 142 SC power), Maintenance (BNSS Sec 144 / CrPC 125), Guardianship, Live-in Relationships, Coparcenary & Succession (Vineeta Sharma rule).",
+            qTypes: "Statutory Condition Satisfaction + Void vs Voidable Classification + Maintenance Eligibility.",
+            stems: [
+              "\"Under the conditions laid down in the passage, is the marriage between [A] and [B] void or voidable?\"",
+              "\"Can [Wife/Child] claim maintenance under the statutory criteria described above?\""
+            ],
+            trap: "Distinguish carefully between 'void ab initio' (no legal status from day one) and 'voidable' (valid until annulled by a court decree at the option of a party)."
+          },
+          {
+            id: "1.6",
+            prio: "P2",
+            prioLabel: "Priority 2 • High-Probability Structural",
+            name: "Constitutional Structure: Federalism, Governor, Schedules & Election Law",
+            freq: "Asked 3/5 Years (Heavy in CLAT 2026: 3 Passages!) • Expected: 1 Passage (5 Qs)",
+            subtopics: "Governor's Assent & Bills (Art 200/201), Anti-Defection Law (10th Schedule - Whip, Merger, Speaker's power), 5th vs 6th Schedule Autonomous Councils (CLAT 2026 XI), Delimitation & 131st Amendment Bill 2026 (Art 82/170), Election Commission & Special Intensive Revision of Electoral Rolls (SC May 2026 Judgment), Parliamentary Privilege.",
+            qTypes: "Constitutional Competence & Procedure Check + Schedule/Article Comparison + Disqualification Trigger.",
+            stems: [
+              "\"Which of the following actions by the Governor is constitutionally valid according to the passage?\"",
+              "\"Under the 10th Schedule rules stated above, does the legislator incur disqualification?\""
+            ],
+            trap: "In structural passages (like 5th vs 6th Schedule or Art 200), examiners swap the powers of the President, Governor, and State Legislature in the options."
+          },
+          {
+            id: "1.7",
+            prio: "P2",
+            prioLabel: "Priority 2 • High-Probability Statutory",
+            name: "New 2025–2026 Enacted Statutes, Tech Law (DPDP/IT Act) & Environmental Law",
+            freq: "Asked 5/5 Years (1 Contemporary Statute every year) • Expected: 1 Passage (5 Qs)",
+            subtopics: "Digital Personal Data Protection (DPDP) Act & Intermediary Safe Harbour (IT Act Sec 79), Jan Vishwas Bill 2026, Sustainable Harnessing of Nuclear Energy Act 2025 (Supplier Liability), Consumer Protection (Dark Patterns / Misleading Ads), Polluter Pays, Precautionary Principle & NGT Jurisdiction.",
+            qTypes: "Unseen Statutory Rule & Proviso Decomposition + Compliance/Exemption Verification.",
+            stems: [
+              "\"Does the platform qualify for safe-harbour protection under the conditions specified in the passage?\"",
+              "\"Which of the following is a mandatory prerequisite before the authority can impose a penalty under the Act?\""
+            ],
+            trap: "Treat every newly enacted statute passage as an 'If A + B (unless C), then D' logic grid—underline 'provided that', 'notwithstanding', and 'subject to'."
+          },
+          {
+            id: "1.8",
+            prio: "P2",
+            prioLabel: "Priority 2 • Tested in 2022, 2023 & 2024",
+            name: "Commercial, Corporate, Securities (SEBI), Insolvency (IBC) & Competition Law",
+            freq: "Asked in 2022, 2023 & 2024 • High-Value Commercial Law Module",
+            subtopics: "Separate Legal Personality & Lifting the Corporate Veil, Directors' Fiduciary Duties, Insider Trading (UPSI — Unpublished Price Sensitive Information under SEBI Rules), Insolvency Resolution Process (Moratorium & Committee of Creditors under IBC), Competition Act (Anti-Competitive Agreements, Cartels & Abuse of Dominant Position).",
+            qTypes: "Regulatory Violation Check + Insider Trading / Cartel Ingredient Verification.",
+            stems: [
+              "\"Does the communication between [X] and [Y] constitute trading on Unpublished Price Sensitive Information (UPSI)?\"",
+              "\"Can the corporate veil be pierced under the exceptions enumerated in the passage?\""
+            ],
+            trap: "For Insider Trading or Cartel liability, check whether the passage requires proof of actual profit/market distortion or merely communication/agreement."
+          },
+          {
+            id: "1.9",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "BNS Property Offences (Theft, Snatching, Extortion, Robbery, Misappropriation & CBT)",
+            freq: "Rare in 2025–2026 -> High 2027 Surprise Potential",
+            subtopics: "Theft (movable property + out of possession + without consent) vs Snatching (new BNS Sec 304) vs Extortion (fear of injury + delivery) vs Robbery (imminent fear) vs Criminal Misappropriation (innocent initial possession + dishonest conversion) vs Criminal Breach of Trust (entrustment).",
+            qTypes: "6-Way Element-by-Element Offence Differentiation.",
+            stems: [
+              "\"Which specific offence under the passage has [A] committed by retaining the found ring after discovering the owner's identity?\""
+            ],
+            trap: "In Theft, property is taken WITHOUT consent; in Extortion, property is delivered WITH wrongful consent induced by fear; in CBT, property is voluntarily ENTRUSTED first."
+          },
+          {
+            id: "1.10",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Intellectual Property Law (AI Copyright, Fair Dealing, Patents, Trademarks & GI)",
+            freq: "Asked in 2023/2024 • 2027 Generative AI & IP Hook",
+            subtopics: "Idea-Expression Dichotomy, Copyright Infringement vs Fair Dealing (Sec 52), Generative AI Training on Copyrighted Works, Trademark Deceptive Similarity & Passing Off, Patent Novelty & Anti-Evergreening (Sec 3(d)), Geographical Indications.",
+            qTypes: "Infringement vs Statutory Fair Dealing Exception Application.",
+            stems: [
+              "\"Does the use of the copyrighted work by the AI developer constitute fair dealing under the criteria in the passage?\""
+            ],
+            trap: "Copyright protects ONLY original expression, never underlying ideas, facts, style, or mathematical algorithms."
+          },
+          {
+            id: "1.11",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "International Law (Non-Refoulement, Extradition, Treaties) & Procedural Law (BNSS / BSA)",
+            freq: "Asked in 2022, 2023 & 2026 • Procedural & International Safeguard",
+            subtopics: "Customary International Law vs Domestic Statute Dualism, Non-Refoulement & Refugee Asylum, Extradition (Dual Criminality & Political Offence Exception), Diplomatic Immunity; BNSS (Zero FIR, Anticipatory Bail, Transit Remand) & Bharatiya Sakshya Adhiniyam (Burden of Proof, Electronic Evidence Admissibility).",
+            qTypes: "Jurisdictional/Procedural Validity + Treaty vs Municipal Law Conflict.",
+            stems: [
+              "\"Can the State extradite [X] when the offence is punishable by death in the requesting country under the passage?\"",
+              "\"Is the electronic record admissible without a certificate under the statutory rule stated above?\""
+            ],
+            trap: "In India, an international treaty does NOT override an explicit domestic statute passed by Parliament in case of a direct conflict."
+          }
+        ]
+      },
+      {
+        secId: "SEC2",
+        secNum: "SECTION 2",
+        title: "Logical Reasoning (CR + Analytical Puzzles)",
+        questions: "24–26 Questions (4 Passages/Sets)",
+        timeBudget: "30 Mins (~7 mins/set)",
+        targetScore: "21.5+ / 24 Marks",
+        topics: [
+          {
+            id: "2.1",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed CR Core",
+            name: "Arguments: Assumption (Necessary vs Sufficient), Strengthen & Weaken",
+            freq: "Asked 4/5 Years (2022–2025) • Expected 2027 Hybrid: 2–3 CR Passages (12–18 Qs)",
+            subtopics: "Identifying Premise vs Conclusion, Unstated Necessary Assumptions (Negation Test), Sufficient Assumptions, Strengthening via Alternate Cause Elimination, Weakening by Attacking the Causal Link or Sampling Bias.",
+            qTypes: "Necessary Assumption + Most Strengthens + Most Weakens/Undermines.",
+            stems: [
+              "\"Which of the following is an unstated assumption on which the author's argument depends?\"",
+              "\"Which of the following, if true, most seriously weakens the author's conclusion?\"",
+              "\"Which of the following, if true, provides the strongest support for the author's claim?\""
+            ],
+            trap: "To verify an Assumption option, NEGATE it: if negating the statement destroys the author's conclusion, it is 100% the correct assumption."
+          },
+          {
+            id: "2.2",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed CR Core",
+            name: "Inferences, Must-Be-True, Paradox Resolution, Flaws & Boldface Roles",
+            freq: "Asked 4/5 Years (2022–2025) • Expected: 4–6 Qs across CR Passages",
+            subtopics: "Strict Deductive Inference ('Properly Inferred'), Cannot Be True / Contradicts, Resolving Apparent Discrepancies/Paradoxes, Logical Flaws (Correlation vs Causation, Circular Reasoning, False Dilemma, Ad Hominem, Overgeneralization), Role of Boldface Statements & Parallel Reasoning.",
+            qTypes: "Must Be True + Resolve the Paradox + Method of Reasoning / Logical Flaw.",
+            stems: [
+              "\"Which of the following can be properly inferred from the passage?\"",
+              "\"Which of the following, if true, most helps to resolve the apparent discrepancy described above?\"",
+              "\"The reasoning in the author's argument is flawed because it...\""
+            ],
+            trap: "In CR Inferences, reject any option that uses extreme quantifiers ('always', 'never', 'only') unless the passage itself states an absolute rule."
+          },
+          {
+            id: "2.3",
+            prio: "P1",
+            prioLabel: "Priority 1 • Analytical Core (Asked 3 Years Straight!)",
+            name: "Multi-Variable Scheduling, Assignment & Mystery Elimination Matrix (5x4 Grid)",
+            freq: "Asked in 2024 (XVII), 2025 (XVII), and 2026 (XVII 'Sunburst Medallion') • Expected: 1 Set (6 Qs)",
+            subtopics: "Matching 5–6 Entities across 3–4 Attributes (Person + Project/Suspect + Day/Time Slot + Location/Access Code), Positive vs Negative Clues ('neither X nor Y'), Conditional Exclusion ('If A is in Slot 1, B is in Slot 3'), Contradiction/Alibi Elimination.",
+            qTypes: "Definite Assignment + Conditional ('If X..., then who...') + Complete Valid Combination + Elimination Count.",
+            stems: [
+              "\"Which suspect had both the valid access credential and an unverified alibi during the 10:00 PM window?\"",
+              "\"If [A] is assigned to [Project X], which of the following must be true?\"",
+              "\"For how many entities can their exact schedule be uniquely determined from the clues?\""
+            ],
+            trap: "Draw ONE master 2D cross-tabulation table before reading Question 1—never solve questions one by one in your head."
+          },
+          {
+            id: "2.4",
+            prio: "P1",
+            prioLabel: "Priority 1 • Analytical Core",
+            name: "Linear & Circular Seating Arrangements (Single/Dual Row & Facing In/Out)",
+            freq: "Asked in 2025 (XVIII Circular) • High-Probability 2027 Puzzle Set",
+            subtopics: "Linear Row (8 people facing North/South, Dual Parallel Rows 4v4), Circular/Polygon Table (6–8 people facing Center vs Mixed Inward/Outward), Combined Seating + 1 Attribute (Profession/City), Immediate Neighbor vs 'sits 3rd to the left of'.",
+            qTypes: "Exact Relative Position + Odd-One-Out Pair + Conditional Swap.",
+            stems: [
+              "\"Who sits second to the right of the person who is immediately opposite to [M]?\"",
+              "\"Four of the following five are alike in a certain way based on their seating positions; which one does not belong?\""
+            ],
+            trap: "Always sketch 2 parallel diagrams simultaneously when a clue gives 2 possible seats (e.g., 'A sits 2nd to left or right of B') and cross out the invalid branch."
+          },
+          {
+            id: "2.5",
+            prio: "P2",
+            prioLabel: "Priority 2 • 2026 Analytical Archetype",
+            name: "Coded/Symbolic Blood Relations & Multi-Generation Family Tree Puzzles",
+            freq: "Asked in 2026 (XVIII Symbolic Blood Relations) • Expected: 0.5–1 Set",
+            subtopics: "Mathematical/Symbolic Operators (`A + B` = mother, `A - B` = brother, `A % B` = father, `A × B` = sister), Backward vs Forward Coding (`B` is mother of `A`), 3-Generation Family Tree + Profession/Marriage constraints.",
+            qTypes: "Expression-to-Relationship Deduction + Relationship-to-Expression Verification + Missing Operator Symbol.",
+            stems: [
+              "\"In the expression 'P + Q - R ÷ S', how is P related to S?\"",
+              "\"Which of the following expressions definitely shows that M is the maternal uncle of N?\""
+            ],
+            trap: "Never eliminate an option by gender alone until you check whether that person is the LAST symbol in the chain; also watch for Consortium symbol typos (like CLAT 2026 Q100)."
+          },
+          {
+            id: "2.6",
+            prio: "P2",
+            prioLabel: "Priority 2 • 2026 Analytical Archetype",
+            name: "Sequential Word/Letter Transformation & Alphanumeric Step-Coding",
+            freq: "Asked in 2026 (XVI 'ELECTROCARDIOGRAPH' 18-Letter Puzzle)",
+            subtopics: "Multi-step mechanical rules on an 18–20 letter word: Step 1 (Reverse halves/blocks), Step 2 (Vowel -> next letter, Consonant -> previous letter), Step 3 (Remove duplicates / alternate positions), Left- vs Right-end counting.",
+            qTypes: "Exact Letter at $N$-th Position after Step $K$ + Pair-Distance Counting + Rule Reversal.",
+            stems: [
+              "\"After applying Step 3, which letter is 6th to the right of the 4th letter from the left end?\"",
+              "\"How many vowels remain immediately preceded by a consonant and followed by a vowel in the final sequence?\""
+            ],
+            trap: "Write index numbers `1 to 18` above the letters in a clean row for each step—100% of mistakes come from miscounting positions mentally."
+          },
+          {
+            id: "2.7",
+            prio: "P2",
+            prioLabel: "Priority 2 • 2026 Analytical Archetype",
+            name: "Games & Tournaments (Round-Robin Points Table, Net Score & Knockout Brackets)",
+            freq: "Asked First Time in 2026 (XIX 4-Team Science Olympiad)!",
+            subtopics: "Round-Robin Match Formula ($N(N-1)/2$ matches; 4 teams = 6 matches, 5 teams = 10 matches), Total Wins = Total Losses invariance, Points Table with Bonus/Penalty Points (+3 win, +1 tie, -1 penalty), Knockout Seedings (Seed $k$ vs $N+1-k$).",
+            qTypes: "Head-to-Head Match Winner Deduction + Missing Table Cell + Minimum/Maximum Possible Points.",
+            stems: [
+              "\"What was the exact result of the match between Team Alpha and Team Gamma?\"",
+              "\"Which team finished second on the leaderboard after all bonus and penalty adjustments?\""
+            ],
+            trap: "Always verify the invariant first: across the entire tournament, Sum of Wins MUST equal Sum of Losses, and Total Draws must be an EVEN number."
+          },
+          {
+            id: "2.8",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance (#1 Unasked Puzzle Type)",
+            name: "Conditional Selection, Team Formation & Grouping (`If-Then` Logic Rules)",
+            freq: "Never Asked in 2022–2026 -> #1 Predicted New Analytical Set for 2027",
+            subtopics: "Selecting $K$ members from $N$ candidates (e.g., 5 out of 9) under 4 logical rules: Inclusion (`If A -> B`), Mutual Exclusion (`C and D cannot be together`), Contrapositive (`If NOT B -> NOT A`), Biconditional (`E if and only if F`), Quota constraints (at least 2 jurists).",
+            qTypes: "Valid Complete Team + Mandatory Member Deduction + Rule Replacement/Modification.",
+            stems: [
+              "\"Which of the following is an acceptable committee of five members?\"",
+              "\"If [P] is selected and [Q] is rejected, which of the following pairs MUST be selected together?\""
+            ],
+            trap: "Immediately write the Contrapositive next to every `If A -> B` rule (`If ~B -> ~A`). Examiners test the contrapositive in 80% of questions."
+          },
+          {
+            id: "2.9",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Direction Sense, Coded Compass Grids & Shadow/Pythagoras Displacement",
+            freq: "Never Asked in 2022–2026 -> High-Probability 2027 Analytical Expansion",
+            subtopics: "Coded Direction Grid (`A @ B` = North), 90°/135° Clockwise vs Anticlockwise turns, Pythagoras Shortest Distance ($\sqrt{\Delta x^2 + \Delta y^2}$), Morning Sunrise (shadow West) vs Evening Sunset (shadow East) rules.",
+            qTypes: "Shortest Straight-Line Distance + Relative Compass Direction + Shadow Orientation.",
+            stems: [
+              "\"What is the shortest distance and direction of Point Z with respect to Point A?\"",
+              "\"If X's shadow falls exactly to the left of Y at 7:00 AM, which direction is X facing?\""
+            ],
+            trap: "Always draw a $(0,0)$ origin and track $(\Delta x, \Delta y)$ coordinates (+/- East/West, +/- North/South) rather than relying on visual sketch proportions."
+          },
+          {
+            id: "2.10",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Order, Ranking, Vertical Floor/Box Stacks & Quantitative Inequalities",
+            freq: "Never Asked in 2022–2026 -> High-Probability 2027 Analytical Expansion",
+            subtopics: "7–8 Floor Vertical Building or Box Stack ('3 floors between P and Q' = $|P-Q|=4$; 'immediately above' = $Q+1$), Left-Right Linear Ranking ($T = L + R - 1$, Overlapping vs Non-Overlapping Mid-rank), Coded Inequality Chains (`A > B >= C = D`).",
+            qTypes: "Floor/Box Position Deduction + Total Headcount Minimum/Maximum + Inequality Conclusion.",
+            stems: [
+              "\"How many boxes are placed between Box M and the box containing Law Books?\"",
+              "\"Who lives on the floor immediately below the person who likes Economics?\""
+            ],
+            trap: "'3 floors between P and Q' means their floor numbers differ by 4 (e.g., Floor 2 and Floor 6), NOT 3!"
+          },
+          {
+            id: "2.11",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Deductive Syllogisms (`Only a few` / Possibility) & Statement–Course of Action",
+            freq: "Classic Law Entrance Logic • 2027 Hybrid Buffer",
+            subtopics: "Venn Diagram Syllogisms (`All`, `Some`, `No`, `Only a few A are B` = Some A are B AND Some A are NOT B, `Only B are A` = All A are B exclusively, `Can never be` vs `Is a possibility`), Cause-Effect & Administrative Course of Action.",
+            qTypes: "Conclusion Validity (I & II Follow) + Feasible Course of Action Evaluation.",
+            stems: [
+              "\"Assuming the statements to be true even if they vary from commonly known facts, decide which conclusions logically follow:\""
+            ],
+            trap: "'Only B are A' translates to 'All A are B' (and A cannot intersect anything else), whereas 'Only a few A are B' means BOTH 'Some A are B' AND 'Some A are NOT B'."
+          },
+          {
+            id: "2.12",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Binary Logic (Truth-Teller / Liar / Alternator) & Sequential Input-Output Machines",
+            freq: "High-Difficulty Analytical Insurance (AILET/CLAT Crossover)",
+            subtopics: "Knights (always truth), Knaves (always lie), and Alternators (T-F-T or F-T-F across 3 statements); Word-and-Number Input-Output Machine Shifting (sorting words alphabetically and numbers ascending/descending from both ends).",
+            qTypes: "Contradiction-Based Culprit Identification + Step-N Machine Output Prediction.",
+            stems: [
+              "\"If exactly one of the three witnesses is telling the truth, who committed the breach?\"",
+              "\"Which of the following will be Step IV for the given input sequence?\""
+            ],
+            trap: "In Truth-Liar puzzles, find the two witnesses who directly contradict each other ('A did it' vs 'A did not do it')—one of them MUST be the truth-teller!"
+          }
+        ]
+      },
+      {
+        secId: "SEC3",
+        secNum: "SECTION 3",
+        title: "English Language",
+        questions: "24 Questions (4–5 Passages)",
+        timeBudget: "22 Mins (~4.5 mins/passage)",
+        targetScore: "21.5+ / 24 Marks",
+        topics: [
+          {
+            id: "3.1",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core (45% of Section)",
+            name: "Global Synthesis: Main Idea, Central Thesis, Suitable Title & Passage Structure",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 5–7 Qs across all passages",
+            subtopics: "Central Argument vs Supporting Example, Scope Check (Too Narrow vs Too Broad vs Extreme Distortion), Paragraph-by-Paragraph Structural Flow, Logical Continuation (Next Paragraph Prediction).",
+            qTypes: "Primary Purpose / Central Thesis + Most Appropriate Title + Structural Organization.",
+            stems: [
+              "\"Which of the following best encapsulates the central thesis of the passage?\"",
+              "\"What is the primary purpose of the author in the second paragraph?\"",
+              "\"Which of the following would be the most appropriate title for the passage?\""
+            ],
+            trap: "Eliminate any Title or Main Idea option that focuses only on an example from Paragraph 3 rather than the overarching thesis of the whole passage."
+          },
+          {
+            id: "3.2",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Implicit Inference, Author's Perspective & Multi-Statement Fact Verification",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 7–9 Qs",
+            subtopics: "Strict Textual Inference (Must Be True from text), NOT True / EXCEPT Elimination (3 correct vs 1 distorted), Multi-Statement Roman Numeral Verification (Statements I, II, III), Cause-Effect Relationships in Argumentative Prose.",
+            qTypes: "Deductive Inference + 'All are true EXCEPT' + Multi-Statement (I, II, III) Accuracy.",
+            stems: [
+              "\"Which of the following can be most reasonably inferred from the passage?\"",
+              "\"All of the following statements are supported by the passage EXCEPT:\"",
+              "\"Which of the given statements (I, II, and III) accurately reflects the author's view?\""
+            ],
+            trap: "Watch out for the 'Half-True Swap': an option copies exact words from the passage but reverses the cause and effect or swaps 'may' for 'must'."
+          },
+          {
+            id: "3.3",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core",
+            name: "Contextual Vocabulary, Antonyms, Idioms & Phrasal Verbs",
+            freq: "Asked 5/5 Years (Spiked to 8 Qs in CLAT 2026!) • Expected: 4–7 Qs",
+            subtopics: "Polysemous Words (secondary meaning in context), Antonym in Context ('nearly opposite'), Idiomatic Expressions & Phrasal Verbs, Contextual Nuance (Connotation: Pejorative vs Approbatory).",
+            qTypes: "Contextual Synonym/Antonym + Phrase Replacement + Idiom Meaning in Sentence.",
+            stems: [
+              "\"As used in the third paragraph, the word '[X]' most nearly means:\"",
+              "\"Which of the following words is most nearly OPPOSITE in meaning to '[Y]' as used in the passage?\"",
+              "\"What does the phrase '[idiom]' imply in the context of the author's argument?\""
+            ],
+            trap: "When a common word is tested, its primary dictionary meaning is almost ALWAYS the trap distractor—plug the 4 options back into the sentence to test fit."
+          },
+          {
+            id: "3.4",
+            prio: "P2",
+            prioLabel: "Priority 2 • High-Yield Literary & Analytical",
+            name: "Author's Tone, Attitude, Mood & Literary/Rhetorical Figures of Speech",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 3–4 Qs",
+            subtopics: "Tone Spectrum: Analytical, Acerbic, Sardonic, Didactic, Elegiac, Sanguine, Circumspect, Ambivalent, Polemical, Laudatory; Figures of Speech: Metaphor, Simile, Irony, Paradox, Oxymoron, Personification, Hyperbole, Metonymy, Synecdoche, Allusion, Juxtaposition.",
+            qTypes: "Tone Classification + Rhetorical Device Identification.",
+            stems: [
+              "\"How would you best characterize the author's tone throughout the passage?\"",
+              "\"Which literary device is employed in the expression '[quoted line]'?\""
+            ],
+            trap: "CLAT authors are rarely 'indifferent/apathetic' or 'fanatical/abusive'—prefer nuanced academic tones like 'critically analytical', 'cautiously optimistic', or 'sardonic'."
+          },
+          {
+            id: "3.5",
+            prio: "P2",
+            prioLabel: "Priority 2 • 2026 Micro-Skill Addition",
+            name: "Passage-Embedded Functional Grammar, Clauses, Voice & Punctuation Nuance",
+            freq: "Re-introduced in 2025–2026 (2–3 Qs inside RC passages)",
+            subtopics: "Part of Speech Shifts (Gerund vs Participle vs Infinitive), Clause Types (Restrictive vs Non-Restrictive Relative Clause, Noun vs Adverbial Clause), Active-Passive Transformation, Modal Auxiliaries & Subjunctive Mood, Em-dash/Semicolon rhetorical function.",
+            qTypes: "Grammatical Function of Underlined Word/Clause + Sentence Transformation.",
+            stems: [
+              "\"Identify the grammatical function of the underlined word/clause in the sentence from the passage:\"",
+              "\"Why does the author place the phrase '[X]' within em-dashes in the second paragraph?\""
+            ],
+            trap: "An `-ing` word acting as a noun subject/object is a Gerund; an `-ing` word modifying a noun is a Participial Adjective."
+          },
+          {
+            id: "3.6",
+            prio: "P2",
+            prioLabel: "Priority 2 • Tested Across 2022–2026",
+            name: "Foreign/Latin Maxims in Prose, Analogical Reasoning & Source Genre / Audience",
+            freq: "Asked 4/5 Years (1–2 Qs per paper)",
+            subtopics: "Foreign/Latin Expressions in Editorial Prose (sine qua non, quid pro quo, zeitgeist, schadenfreude, fait accompli, carte blanche, modus operandi, status quo ante, ad hoc, prima facie), Identifying Passage Source/Genre (Op-Ed, Monograph, Memoir, Policy Review) & Target Audience, Analogical Situation Matching.",
+            qTypes: "Foreign Phrase Meaning + Analogical Scenario + Source/Audience Deduction.",
+            stems: [
+              "\"From which of the following sources is this passage most likely excerpted?\"",
+              "\"Which of the following situations is most analogous to the dilemma described in paragraph 2?\""
+            ],
+            trap: "Match the abstract mechanism (not the surface topic) when solving 'most analogous situation' questions."
+          },
+          {
+            id: "3.7",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Comparative Dual-Passage RC (Passage A vs Passage B) & Literary Poetry/Drama Excerpt",
+            freq: "Used in AILET/LSAT • High 2027 Structural Innovation Candidate",
+            subtopics: "Comparing two 220-word passages on the same theme: Point of Contention, Shared Assumption, How Author B would respond to Author A's claim; Unseen Poem/Dramatic Soliloquy Stanza Analysis (Speaker's Persona, Imagery Shift, Volta/Turn).",
+            qTypes: "Point of Agreement/Disagreement between A & B + Poetic Stanza Inference.",
+            stems: [
+              "\"On which of the following points do the authors of Passage A and Passage B most directly disagree?\"",
+              "\"How does the speaker's attitude shift between the first and final stanzas?\""
+            ],
+            trap: "For a 'Point of Disagreement' between Passage A and B, BOTH authors must explicitly address that exact issue with opposing views."
+          },
+          {
+            id: "3.8",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Passage-Embedded Para-Jumbles, Missing Sentence Insertion & Logical Completion",
+            freq: "Tested in 2026 Set Variations • 1–2 Qs",
+            subtopics: "Inserting a removed sentence into `[1]`, `[2]`, `[3]`, or `[4]` inside a paragraph using pronoun antecedents (`this`, `such`, `however`), Completing the final blank sentence of an argument, Reordering 4 sentences within an excerpt.",
+            qTypes: "Missing Sentence Placement + Final Blank Logical Completion.",
+            stems: [
+              "\"Where in the second paragraph would the following sentence best fit?\"",
+              "\"Which of the following most logically completes the final paragraph of the passage?\""
+            ],
+            trap: "Track demonstrative pronouns (`this paradox`, `these measures`, `such claims`)—the sentence BEFORE the insertion point must contain the exact plural/singular referent."
+          }
+        ]
+      },
+      {
+        secId: "SEC4",
+        secNum: "SECTION 4",
+        title: "Quantitative Techniques (Caselet DI)",
+        questions: "12 Questions (2 Caselet Passages)",
+        timeBudget: "14 Mins (~7 mins/set)",
+        targetScore: "11.0+ / 12 Marks",
+        topics: [
+          {
+            id: "4.1",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core (In 100% of Sets!)",
+            name: "Percentages, Successive Percentage Change, Growth Rates & Base-Shift Traps",
+            freq: "Asked 5/5 Years in ALL 11 DI Sets (2022–2026) • Expected: 4–5 Qs",
+            subtopics: "Fraction-to-Percentage Equivalents ($1/2$ to $1/20$), `'X is what % of Y'` vs `'X is what % more/less than Y'`, Percentage Point Difference vs Relative % Change, Successive Change Formula ($a + b + ab/100$), Reverse Base Recovery.",
+            qTypes: "Relative % Increase/Decrease + Successive Multi-Year Growth + Base-Shift Comparison.",
+            stems: [
+              "\"The number of [X] in 2025 is approximately what percent more or less than the number of [Y] in 2023?\"",
+              "\"If category A increases by 20% next year while total volume decreases by 10%, find the new share of A:\""
+            ],
+            trap: "Always circle the word AFTER 'than' or 'of'—that exact quantity is your denominator! 70% of wrong options use the wrong denominator."
+          },
+          {
+            id: "4.2",
+            prio: "P1",
+            prioLabel: "Priority 1 • Guaranteed Core (In 100% of Sets!)",
+            name: "Ratios, Proportions, Cross-Multiplied Chained Ratios & Linear Systems",
+            freq: "Asked 5/5 Years in ALL 11 DI Sets (2022–2026) • Expected: 3–4 Qs",
+            subtopics: "Chained Ratios ($A:B$ and $B:C \\rightarrow A:B:C$), Splitting Totals in Ratio $a:b:c$, Male:Female or Urban:Rural Sub-Classification Tables, 2-Variable Linear Equations ('Total is 840; A exceeds B by 15% of C'), Componendo-Dividendo.",
+            qTypes: "Missing Table Matrix Extraction via Ratios + Sub-Category Ratio After Modification.",
+            stems: [
+              "\"What is the ratio of [Category P in City X] to [Category Q in City Y]?\"",
+              "\"If the ratio of male to female applicants in Department B is 7:5, find the difference between...\""
+            ],
+            trap: "Spend the first 2.5 minutes converting all prose ratios and percentages into ONE complete integer table on your rough sheet—then all 6 questions take 30 seconds each."
+          },
+          {
+            id: "4.3",
+            prio: "P1",
+            prioLabel: "Priority 1 • High-Yield Core",
+            name: "Averages, Weighted Averages, Alligation & Profit, Loss, Discount / Tax Caselets",
+            freq: "Asked 5/5 Years (2022–2026) • Expected: 2–3 Qs",
+            subtopics: "Simple Mean vs Weighted Average ($\\sum w_i x_i / \\sum w_i$), Deviation Method from Assumed Mean, Alligation Cross Rule (mixing two groups), Cost Price (CP), Selling Price (SP), Marked Price (MP), Margin vs Markup %, GST/Tax Slabs.",
+            qTypes: "Weighted Group Average + Alligation Ratio + Revenue/Profit Margin Caselet.",
+            stems: [
+              "\"What is the weighted average cost per unit across all four manufacturing plants?\"",
+              "\"If a 15% discount is offered on the marked price and the seller still earns a 20% profit, find...\""
+            ],
+            trap: "Never take the simple average of two percentages or averages when the base populations are unequal—always weight by the base counts!"
+          },
+          {
+            id: "4.4",
+            prio: "P2",
+            prioLabel: "Priority 2 • High-Probability Caselet Archetype",
+            name: "2-Set & 3-Set Venn Diagram (Inclusion-Exclusion) Survey Caselets",
+            freq: "Classic Caselet Format • #1 Predicted Prose DI Structure for 2027",
+            subtopics: "7 Disjoint Regions of a 3-Circle Venn Diagram: 'Only A', 'A and B only' vs 'A and B' (includes $A \\cap B \\cap C$), 'At least two', 'Exactly two', 'At most one', 'Neither'. Formula: $n(A \\cup B \\cup C) = \\sum A - (\\text{Exactly 2}) - 2(\\text{All 3})$.",
+            qTypes: "Exact Region Count ('Only X and Y') + 'At Least Two' Aggregation.",
+            stems: [
+              "\"How many respondents subscribed to BOTH Service A and Service B, but NOT Service C?\"",
+              "\"What percentage of the surveyed population uses at least two of the three platforms?\""
+            ],
+            trap: "'50 people like A and B' includes the center overlap ($A \\cap B \\cap C$), whereas '50 people like ONLY A and B' excludes the center overlap—always fill the center region first!"
+          },
+          {
+            id: "4.5",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Time, Speed & Distance (Relative Speed, Trains, Boats) & Time and Work / Pipes",
+            freq: "Asked in 2022/2023 • High 2027 Logistics/EV/Project Caselet Candidate",
+            subtopics: "Unit Conversion ($\\text{km/hr} \\times 5/18 = \\text{m/s}$), Average Speed for Equal Distances ($2uv/(u+v)$), Relative Speed ($u \\pm v$), Boats Upstream/Downstream ($B \\pm S$); LCM Total Work Method, Person-Days ($M_1 D_1 H_1 / W_1 = M_2 D_2 H_2 / W_2$), Inlet/Outlet Pipes.",
+            qTypes: "Multi-Leg Fleet/Train Logistics Caselet + Worker Efficiency & Project Completion.",
+            stems: [
+              "\"If Machine A works for 4 days and is then joined by Machine B, in how many total days is the order completed?\"",
+              "\"What is the average speed of the delivery vehicle across the entire three-stage route?\""
+            ],
+            trap: "Average speed for a round trip of equal distance at speeds $u$ and $v$ is the harmonic mean $2uv/(u+v)$, NEVER $(u+v)/2$."
+          },
+          {
+            id: "4.6",
+            prio: "P3",
+            prioLabel: "Priority 3 • 2027 Shock Insurance",
+            name: "Simple vs Compound Interest, Instalments, Depreciation & Financial Portfolios",
+            freq: "Asked in Financial Caselets • Backup 1-Set Insurance",
+            subtopics: "SI ($PRT/100$), CI ($P(1+R/100)^n$), Half-Yearly/Quarterly Compounding, 2-Year CI-SI Difference ($P(R/100)^2$), 3-Year CI-SI Difference ($P(R/100)^2(3 + R/100)$), Annual Asset Depreciation ($P(1-R/100)^n$).",
+            qTypes: "2-Year/3-Year CI vs SI Portfolio Caselet + Effective Yield Comparison.",
+            stems: [
+              "\"What is the difference between the compound interest (compounded annually) and simple interest earned on Fund B after 2 years?\""
+            ],
+            trap: "Memorize $D_2 = P(R/100)^2$—it turns a 3-minute decimal calculation into a 10-second mental step."
+          },
+          {
+            id: "4.7",
+            prio: "P3",
+            prioLabel: "Priority 3 • Tested in CLAT 2022 (Passage XXX)",
+            name: "2D/3D Mensuration (Cylinder, Cone, Sphere, Cuboid) & Contingency-Table Probability",
+            freq: "Asked in CLAT 2022 (Passage XXX) • Complete Mathematical Safeguard",
+            subtopics: "Area/Perimeter of Circle, Sector, Rhombus, Trapezium; Volume & Surface Area of Cylinder ($\\pi r^2 h$), Cone ($\\frac{1}{3}\\pi r^2 h$), Sphere ($\\frac{4}{3}\\pi r^3$), Cuboid ($lbh$); Percentage Change in Area/Volume when Radius/Height changes; Conditional Probability from a Table ($P(A|B) = n(A \\cap B)/n(B)$).",
+            qTypes: "Volume/Capacity Ratio Caselet + Conditional Subset Probability.",
+            stems: [
+              "\"If the radius of the cylindrical storage tank is increased by 20% and height is reduced by 25%, find the percentage change in volume:\"",
+              "\"If a student is selected at random from those who passed Test 1, what is the probability they also passed Test 2?\""
+            ],
+            trap: "In Conditional Probability ('Given that X occurred, find probability of Y'), the denominator is ONLY the subset count of X, not the grand total."
+          }
+        ]
+      }
+    ];
+
+    const STORAGE_KEY = "clat_2027_final_syllabus_checks_v2";
+    let savedChecks = {};
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem("clat_2027_final_syllabus_checks_v1");
+      if (raw) savedChecks = JSON.parse(raw);
+    } catch (e) {
+      savedChecks = {};
+    }
+
+    let activeSecFilter = "ALL";
+    let activePrioFilter = "ALL";
+    let searchQuery = "";
+    let showAllStems = true;
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(savedChecks));
+      } catch (e) {}
+    }
+
+    function getTopicProgress(topicId) {
+      const c1 = !!savedChecks[topicId + "_c1"];
+      const c2 = !!savedChecks[topicId + "_c2"];
+      const c3 = !!savedChecks[topicId + "_c3"];
+      return { c1, c2, c3, count: (c1 ? 1 : 0) + (c2 ? 1 : 0) + (c3 ? 1 : 0) };
+    }
+
+    function updateProgressUI() {
+      let totalSteps = 0;
+      let doneSteps = 0;
+
+      const secStats = {};
+      SYLLABUS_DATA.forEach(sec => {
+        let sTotal = sec.topics.length * 3;
+        let sDone = 0;
+        sec.topics.forEach(t => {
+          const p = getTopicProgress(t.id);
+          sDone += p.count;
+        });
+        totalSteps += sTotal;
+        doneSteps += sDone;
+        secStats[sec.secId] = { total: sTotal, done: sDone, pct: Math.round((sDone / sTotal) * 100) };
+      });
+
+      const globalPct = totalSteps ? Math.round((doneSteps / totalSteps) * 100) : 0;
+      document.getElementById("globalProgressText").textContent = `${doneSteps} / ${totalSteps} Steps (${globalPct}%)`;
+      document.getElementById("globalProgressBar").style.width = `${globalPct}%`;
+
+      // Render section cards
+      const container = document.getElementById("sectionCardsContainer");
+      container.innerHTML = "";
+      SYLLABUS_DATA.forEach(sec => {
+        const st = secStats[sec.secId];
+        const card = document.createElement("div");
+        card.className = "sec-card" + (activeSecFilter === sec.secId ? " active" : "");
+        card.innerHTML = `
+          <div class="sec-card-top">
+            <span class="sec-num-badge">${sec.secNum}</span>
+            <span class="sec-weight">${sec.targetScore}</span>
+          </div>
+          <div class="sec-title">${sec.title}</div>
+          <div class="sec-meta">${sec.questions} • ${sec.topics.length} Numbered Topics</div>
+          <div class="sec-prog-wrap">
+            <div class="sec-prog-bar">
+              <div class="sec-prog-fill" style="width: ${st.pct}%"></div>
+            </div>
+            <span class="sec-prog-text">${st.pct}%</span>
+          </div>
+        `;
+        card.addEventListener("click", () => {
+          activeSecFilter = activeSecFilter === sec.secId ? "ALL" : sec.secId;
+          updateProgressUI();
+          renderSyllabus();
+        });
+        container.appendChild(card);
+      });
+    }
+
+    function renderSyllabus() {
+      const main = document.getElementById("syllabusMain");
+      main.innerHTML = "";
+
+      const q = searchQuery.trim().toLowerCase();
+
+      SYLLABUS_DATA.forEach(sec => {
+        if (activeSecFilter !== "ALL" && activeSecFilter !== sec.secId) return;
+
+        const filteredTopics = sec.topics.filter(t => {
+          const prog = getTopicProgress(t.id);
+          if (activePrioFilter === "TODO" && prog.count === 3) return false;
+          if (activePrioFilter !== "ALL" && activePrioFilter !== "TODO" && t.prio !== activePrioFilter) return false;
+          if (q) {
+            const hay = `${t.id} ${t.name} ${t.subtopics} ${t.qTypes} ${t.stems.join(" ")}`.toLowerCase();
+            if (!hay.includes(q)) return false;
+          }
+          return true;
+        });
+
+        if (filteredTopics.length === 0) return;
+
+        const secBlock = document.createElement("section");
+        secBlock.className = "section-block";
+
+        secBlock.innerHTML = `
+          <div class="section-banner">
+            <div>
+              <div class="section-banner-title">${sec.secNum}: ${sec.title}</div>
+              <div class="section-banner-sub">Ordered strictly by mark yield & 2022–2026 empirical probability</div>
+            </div>
+            <div class="section-banner-badges">
+              <span class="meta-pill">📊 ${sec.questions}</span>
+              <span class="meta-pill">⏱️ ${sec.timeBudget}</span>
+              <span class="meta-pill">🎯 Target: ${sec.targetScore}</span>
+            </div>
+          </div>
+        `;
+
+        filteredTopics.forEach(t => {
+          const prog = getTopicProgress(t.id);
+          const isComplete = prog.count === 3;
+          const prioClass = t.prio === "P1" ? "prio-1" : (t.prio === "P2" ? "prio-2" : "prio-3");
+
+          const card = document.createElement("div");
+          card.className = "topic-card" + (isComplete ? " completed-card" : "");
+          card.id = `card_${t.id}`;
+
+          const stemsHtml = t.stems.map(s => `<div class="stem-quote">${s}</div>`).join("");
+
+          card.innerHTML = `
+            <div class="topic-header">
+              <div class="topic-title-row">
+                <span class="topic-number">${t.id}</span>
+                <h3 class="topic-name">${t.name}</h3>
+              </div>
+              <div class="badge-row">
+                <span class="prio-badge ${prioClass}">${t.prioLabel}</span>
+                <span class="freq-badge">${t.freq}</span>
+              </div>
+            </div>
+
+            <div class="subtopics-box">
+              <strong>Exact Sub-Topics & Rules to Study:</strong> ${t.subtopics}
+            </div>
+
+            <div class="check-grid">
+              <label class="check-label ${prog.c1 ? 'checked' : ''}">
+                <input type="checkbox" data-tid="${t.id}" data-step="c1" ${prog.c1 ? 'checked' : ''} />
+                <span>Step 1: Concept & Rule Mastered</span>
+              </label>
+              <label class="check-label ${prog.c2 ? 'checked' : ''}">
+                <input type="checkbox" data-tid="${t.id}" data-step="c2" ${prog.c2 ? 'checked' : ''} />
+                <span>Step 2: 2022–2026 PYQ Stems Drilled</span>
+              </label>
+              <label class="check-label ${prog.c3 ? 'checked' : ''}">
+                <input type="checkbox" data-tid="${t.id}" data-step="c3" ${prog.c3 ? 'checked' : ''} />
+                <span>Step 3: Timed Mock Ready (90%+ Acc.)</span>
+              </label>
+            </div>
+
+            <button class="details-toggle" data-target="det_${t.id}">
+              <span>▾ Question Types, Verbatim Stems & Examiner Trap</span>
+            </button>
+
+            <div class="details-content ${showAllStems ? '' : 'collapsed'}" id="det_${t.id}">
+              <div class="detail-box">
+                <div class="detail-box-title">Question Types & Verbatim Stems</div>
+                <div style="margin-bottom:6px; font-weight:600; color:#334155;">${t.qTypes}</div>
+                ${stemsHtml}
+              </div>
+              <div class="detail-box">
+                <div class="detail-box-title">Examiner Pattern & Elimination Rule</div>
+                <div class="trap-alert"><strong>⚠️ Critical Rule:</strong> ${t.trap}</div>
+              </div>
+            </div>
+          `;
+
+          secBlock.appendChild(card);
+        });
+
+        main.appendChild(secBlock);
+      });
+
+      // Bind checkboxes
+      document.querySelectorAll('input[type="checkbox"][data-tid]').forEach(cb => {
+        cb.addEventListener("change", (e) => {
+          const tid = e.target.getAttribute("data-tid");
+          const step = e.target.getAttribute("data-step");
+          savedChecks[`${tid}_${step}`] = e.target.checked;
+          saveState();
+          updateProgressUI();
+          renderSyllabus();
+        });
+      });
+
+      // Bind individual detail toggles
+      document.querySelectorAll(".details-toggle").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.getAttribute("data-target");
+          const el = document.getElementById(targetId);
+          if (el) el.classList.toggle("collapsed");
+        });
+      });
+    }
+
+    // Priority filter buttons
+    document.querySelectorAll("#prioFilterGroup .filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#prioFilterGroup .filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activePrioFilter = btn.getAttribute("data-prio");
+        renderSyllabus();
+      });
+    });
+
+    // Search input
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderSyllabus();
+    });
+
+    // Toggle all stems
+    document.getElementById("toggleAllDetailsBtn").addEventListener("click", () => {
+      showAllStems = !showAllStems;
+      renderSyllabus();
+    });
+
+    // Reset progress
+    document.getElementById("resetProgressBtn").addEventListener("click", () => {
+      savedChecks = {};
+      saveState();
+      updateProgressUI();
+      renderSyllabus();
+    });
+
+    // Initial render
+    updateProgressUI();
+    renderSyllabus();
+  </script>
+</body>
+</html>
